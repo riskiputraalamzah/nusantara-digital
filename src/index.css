@@ -1,111 +1,88 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import "tailwindcss";
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+/* Tipografi Kustom */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+/* Animasi Navbar  */
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+/* Animasi Garis Bawah Tautan Navbar */
+.nav-link-animated::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dc2626;
+    transition: all 0.3s ease;
 }
 
-body {
-  margin: 0;
+.nav-link-animated:hover::after {
+    width: 100%;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+/* Garis Burger - Basis */
+.burger-line {
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background-color: currentColor;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+/* Garis Burger - Posisi Default */
+.burger-line-top { transform: translateY(-8px); }
+.burger-line-mid { opacity: 1; transform: scaleX(1); }
+.burger-line-bot { transform: translateY(8px); }
+
+/* Garis Burger - Posisi Terbuka (X) */
+.burger-open .burger-line-top { transform: rotate(45deg) translateY(0); }
+.burger-open .burger-line-mid { opacity: 0; transform: scaleX(0); }
+.burger-open .burger-line-bot { transform: rotate(-45deg) translateY(0); }
+
+/* Menu Mobile - Slide Down */
+.mobile-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+.mobile-menu.menu-open {
+    max-height: 400px;
+    opacity: 1;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* Tautan Menu Mobile - Staggered Fade In */
+.mobile-link {
+    transform: translateY(-16px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.menu-open .mobile-link {
+    transform: translateY(0);
+    opacity: 1;
 }
+
+/* Delay bertahap untuk setiap link */
+.menu-open .mobile-link:nth-child(1) { transition-delay: 0ms; }
+.menu-open .mobile-link:nth-child(2) { transition-delay: 75ms; }
+.menu-open .mobile-link:nth-child(3) { transition-delay: 150ms; }
+.menu-open .mobile-link:nth-child(4) { transition-delay: 225ms; }
+
+/* Backdrop Overlay */
+.menu-backdrop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu-backdrop.menu-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
