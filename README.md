@@ -12,21 +12,21 @@ Repositori ini berisi materi dan dokumentasi lomba Nusantara Digital City yang d
 - Fokus: transisi kota metropolis.
 - Menyoroti perkembangan dari kota pelabuhan/sejarah menjadi pusat teknologi modern (Smart City).
 - Menampilkan konsep kota cerdas yang menggabungkan infrastruktur digital, mobilitas pintar, dan inovasi perkotaan.
-- Domain: noekarta.id
+- Domain: <a href="https://noekarta.id" target="_blank" rel="noopener">noekarta.id</a>
 
 ## Tim 2: The Cultural Heritage & Tourism Hub
 
 - Fokus: pendekatan visual estetik, storytelling, dan anggun.
 - Konsep kota sebagai nyawa pariwisata Indonesia.
 - Menggabungkan tradisi lokal dengan pariwisata internasional.
-- Domain: bukittinggiheritage.id
+- Domain: <a href="https://bukittinggiheritage.id" target="_blank" rel="noopener">bukittinggiheritage.id</a>
 
 ## Tim 3: The Creative & Edu-City
 
 - Fokus: kota pelajar dan pusat ekonomi kreatif.
 - Menyajikan "Panduan Wisata Digital" interaktif.
 - Mencakup peta kecil yang memetakan titik-titik keraton/sejarah, hidden gem kuliner, kampung siber, dan pusat teknologi.
-- Domain: neopriangan.id
+- Domain: <a href="https://neopriangan.id" target="_blank" rel="noopener">neopriangan.id</a>
 
 ## Tujuan Repo
 
