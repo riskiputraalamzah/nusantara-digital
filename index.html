@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bandung — Creative Smart City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero" id="home">
+        <nav class="navbar" id="navbar">
+            <div class="container nav-inner">
+                <a class="brand" href="#home">
+                    <img src="image/logo.png" alt="Bandung icon">
+                    <div class="brand-text">
+                        <small>Creative Smart City</small>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#maps">Maps</a></li>
+
+                </ul>
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <a class="btn-outline" id="exploreBtn" href="#destinations">Explore</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-media">
+            <div class="hero-bg active"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow">WELCOME TO</p>
+                <h1 class="title">Bandung</h1>
+                <h2 class="subtitle">Creative Smart City</h2>
+                <p class="lead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.</p>
+                <div class="hero-ctas">
+                    <a class="btn-primary" href="#destinations">Plan My Trip</a>
+                    <button class="btn-secondary" id="watchVideo"><i class="play">▶</i> Watch Video</button>
+                </div>
+            </div>
+
+            <a class="scroll" id="scrollToStats" href="#stats">
+                <span>Scroll Down</span>
+                <i class="arrow">⌄</i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Bandung -->
+    <section id="about" class="section about">
+        <div class="container about-wrap">
+            <div class="about-image"><img src="image/asiaafrica.jpg" alt="Bandung city"></div>
+            <div class="about-content">
+                <span class="section-subtitle">TENTANG BANDUNG</span>
+                <h2>Mengapa Bandung?</h2>
+                <p>Bandung merupakan salah satu kota wisata terbaik di Indonesia yang dikenal dengan perpaduan keindahan alam, budaya, kuliner, serta inovasi teknologi. Sebagai bagian dari konsep <strong>Creative Smart City</strong>, Bandung terus menghadirkan
+                    pengalaman wisata yang modern, nyaman, dan berkelanjutan.</p>
+                <div class="features">
+                    <div class="feature"><i class="icon">🌿</i>
+                        <h4>Nature</h4>
+                    </div>
+                    <div class="feature"><i class="icon">🍽️</i>
+                        <h4>Culinary</h4>
+                    </div>
+                    <div class="feature"><i class="icon">🏛️</i>
+                        <h4>History</h4>
+                    </div>
+                    <div class="feature"><i class="icon">🎭</i>
+                        <h4>Culture</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS (glass cards) -->
+    <section id="stats" class="section section-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="glass-card">
+                    <div class="num counter" data-target="150">0</div>
+                    <div class="label">Destinations</div>
+                </div>
+                <div class="glass-card">
+                    <div class="num counter" data-target="250">0</div>
+                    <div class="label">Culinary</div>
+                </div>
+                <div class="glass-card">
+                    <div class="num counter" data-target="50">0</div>
+                    <div class="label">Events</div>
+                </div>
+                <div class="glass-card">
+                    <div class="num counter" data-target="30">0</div>
+                    <div class="label">Districts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="section featured">
+        <div class="container">
+            <h3>Tempat Terfavorit di Bandung</h3>
+            <div class="featured-grid">
+                <article class="destination-card">
+                    <img src="image/wisata.png" alt="Wisata Alam">
+                    <div class="meta">
+                        <h4>Gunung Tangkuban Perahu</h4><span class="cat">Nature</span><span class="rating">4.8</span></div>
+                </article>
+                <article class="destination-card">
+                    <img src="image/image.png" alt="Sejarah">
+                    <div class="meta">
+                        <h4>Gedung Sate</h4><span class="cat">History</span><span class="rating">4.7</span></div>
+                </article>
+                <article class="destination-card">
+                    <img src="image/asiaafrica.jpg" alt="Kuliner">
+                    <div class="meta">
+                        <h4>Jalan Braga</h4><span class="cat">Culinary</span><span class="rating">4.6</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism Categories -->
+    <section id="categories" class="section categories">
+        <div class="container">
+            <h3>Tourism Categories</h3>
+            <div class="category-grid">
+                <div class="cat-card">🌲<span>Nature</span></div>
+                <div class="cat-card">🍜<span>Culinary</span></div>
+                <div class="cat-card">🏛️<span>History</span></div>
+                <div class="cat-card">🛍️<span>Shopping</span></div>
+                <div class="cat-card">🎓<span>Education</span></div>
+                <div class="cat-card">🎉<span>Entertainment</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="section timeline">
+        <div class="container">
+            <h3>Bandung Timeline</h3>
+            <div class="timeline-track" id="timelineTrack">
+                <div class="timeline-item"><strong>1900</strong>
+                    <p>Pendirian landmark</p>
+                </div>
+                <div class="timeline-item"><strong>1950</strong>
+                    <p>Perkembangan budaya</p>
+                </div>
+                <div class="timeline-item"><strong>2000</strong>
+                    <p>Modernisasi kota</p>
+                </div>
+                <div class="timeline-item"><strong>2025</strong>
+                    <p>Smart City initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events slider -->
+    <section id="events" class="section events">
+        <div class="container">
+            <h3>Upcoming Events</h3>
+            <div class="events-slider" id="eventsSlider">
+                <div class="event-card">
+                    <h4>Bandung Food Fest</h4>
+                    <p>20 Jul 2026</p>
+                </div>
+                <div class="event-card">
+                    <h4>Art & Culture Night</h4>
+                    <p>05 Aug 2026</p>
+                </div>
+                <div class="event-card">
+                    <h4>Smart City Expo</h4>
+                    <p>12 Sep 2026</p>
+                </div>
+            </div>
+            <div class="slider-controls"><button id="eventsPrev">‹</button><button id="eventsNext">›</button></div>
+        </div>
+    </section>
+
+    <!-- Quiz banner -->
+    <section class="section quiz">
+        <div class="container quiz-wrap">
+            <h3>Test your Bandung knowledge</h3>
+            <p>Take a quick quiz and earn a personalized itinerary suggestion.</p>
+            <a class="btn-primary" href="#">Start Quiz</a>
+        </div>
+    </section>
+
+    <!-- Interactive map -->
+    <section id="maps" class="section maps">
+        <div class="container">
+            <h3>Interactive Map</h3>
+            <div class="map-frame" id="mapFrame">(Map placeholder)</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h3>What Visitors Say</h3>
+            <div class="testi-slider" id="testiSlider">
+                <div class="testi">"Loved the food and people!"<span>- A. Visitor</span></div>
+                <div class="testi">"Beautiful scenery and culture."<span>- B. Traveler</span></div>
+                <div class="testi">"Easy to navigate city."<span>- C. Guest</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="col contact">
+                <h4>Contact</h4>
+                <p>Bandung City Hall<br>contact@bandung.go.id</p>
+            </div>
+            <div class="col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#events">Events</a></li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h4>Follow</h4>
+                <div class="social-icons">FB • IG • TW</div>
+            </div>
+            <div class="col newsletter">
+                <h4>Newsletter</h4>
+                <form id="newsletter"><input type="email" placeholder="Email"><button>Subscribe</button></form>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Bandung Creative Smart City</div>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
